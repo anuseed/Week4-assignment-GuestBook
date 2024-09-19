@@ -7,7 +7,7 @@
 //prevent the default behaviour
 //a formData object template
 //get the formValues to insert into the FormData object
-//!when you finish your assignment, make sure you replace the local host url with your deployed url
+//!when you finish your assignment, make sure you replace the local host url with your deployed url https://week4-assignment-guestbook-2emj.onrender.com
 //fetch the CREATE endpoint to send the form values to the server
 
 // fetch ("localhost-url/endpoint"),
@@ -22,6 +22,7 @@
 //FEEDBACK CONTAINER
 //fetch the READ endpoint to have access to the data
 //fetch the url
+
 //parse the response into json
 //wrangle data if necessary
 
