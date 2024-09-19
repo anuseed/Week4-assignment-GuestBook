@@ -5,3 +5,5 @@
 //you need to use SQL queries and parameters
 
 //in the .env you need your database connection string  with the correct password
+
+//your .env file should contain your connection string from supabase
