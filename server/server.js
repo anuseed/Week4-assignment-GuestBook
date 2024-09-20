@@ -33,17 +33,19 @@ app.get("/userComments", async (req, res) => {
   }
 });
 
-app.post("/submittedUserComment", async function (request, response) {
+app.post("/submitUserComment", async function (request, response) {
   const { user_name, comment } = request.body;
+  console.log(user_name);
+  console.log(comment);
+  console.log(request.body);
   try {
     await db.query(
-      `INSERT INTO userComments(user_name,comment) VALUES ($1, $2)`[
-        (user_name, comment)
-      ]
+      `INSERT INTO userComments(user_name,comment) VALUES ($1, $2)`,
+      [user_name, comment]
     );
     response.status(200).json({ success: true });
   } catch (error) {
     response.status(500).json({ success: false });
-    console.log("/submittedUserComment not found", error);
+    console.log("/submittedUserComment had an error", error);
   }
 });
