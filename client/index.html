@@ -6,28 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/app.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Week 4 Assignment Guest Book</title>
   </head>
   <body>
+    <header>
+      <img
+        id="hotel-logo"
+        src="public/hotel-flamingo-high-resolution-logo-black-transparent.webp"
+        alt="Company logo of flamingo with company name, Hotel Flamingo, and slogan, stay in paradise"
+      />
+    </header>
     <div id="user-input-form-container">
-      <p>Tell us what you think of Hotel Flamingo</p>
+      <p>We would love your feedback!</p>
       <form id="user-feedback">
-        <label for="user-name-input">Name</label>
-        <input
-          type="text"
-          name="user_name"
-          id="user-name-input"
-          placeholder="Name"
-          required
-        />
-        <label for="comment-input">Tell us what you think</label>
-        <input type="text" name="comment" id="comment-input" required />
+        <div id="name-box">
+          <label for="user-name-input">Name </label>
+          <input
+            type="text"
+            name="user_name"
+            id="user-name-input"
+            placeholder="Name"
+            required
+          />
+        </div>
+        <div id="comment-box">
+          <label for="comment-input">Comment</label>
+          <input
+            type="text"
+            name="comment"
+            id="comment-input"
+            placeholder="Tell us what you think of Hotel Flamingo"
+            required
+          />
+        </div>
         <button type="submit">submit</button>
+        <div id="error-message"></div>
+        <div id="thank-you-message"></div>
       </form>
     </div>
-    <div id="previous-user-comments"></div>
-    <!-- form -->
-    <!-- user feedback -->
-    <!-- nb name attribute -->
+    <div id="previous-user-comments-container"></div>
+
+    <footer>
+      <div class="icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+      <p>&copy; Anu Heese</p>
+    </footer>
   </body>
 </html>
