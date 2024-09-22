@@ -41,7 +41,7 @@ async function handleSubmit(event) {
     return;
   }
   const response = await fetch(
-    "https://week4-assignment-guestbook-1-lw9c.onrender.com/submitUserComment",
+    "https://week4-assignment-guestbook-2emj.onrender.com/submitUserComment",
     {
       method: "POST",
       headers: {
@@ -76,7 +76,7 @@ console.log(userCommentsContainer);
 //this function communicates with my server
 async function getUserComments() {
   const response = await fetch(
-    "https://week4-assignment-guestbook-1-lw9c.onrender.com/userComments"
+    "https://week4-assignment-guestbook-2emj.onrender.com/userComments"
   );
 
   const commentData = await response.json();
