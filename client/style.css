@@ -1,19 +1,19 @@
 body {
-  background-image: url(public/gislane-dijkstra-6PzwNtSIaFA-unsplash.jpg);
+  background-image: url(gislane-dijkstra-6PzwNtSIaFA-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   z-index: 0;
+  padding: 0;
+  margin: 0;
 }
 
 header {
   background-color: rgb(237, 63, 63);
-  width: 800px;
+  width: 100%;
   height: 200px;
-  margin-top: -30px;
-  margin-left: -30px;
-  margin-right: -30px;
+
   display: flex;
 
   align-items: center;
@@ -21,13 +21,35 @@ header {
   box-shadow: 0 0 20px 2px #eb6457;
 }
 
-/* logo generated with logo.com */
-#hotel-logo {
-  height: 100px;
-  padding: 50px;
-  padding-left: 80px;
+#page {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
+/* logo generated with logo.com */
+#hotel-logo {
+  padding: 50px;
+
+  width: 500px;
+  max-width: 100%;
+}
+#user-feedback {
+  width: 100%;
+}
+#user-feedback input {
+  width: 100%;
+}
+
+p {
+  font-size: larger;
+}
+#name-box {
+  display: flex;
+  justify-content: space-evenly;
+}
 #user-name-input {
   height: 20px;
   width: auto;
@@ -37,19 +59,19 @@ header {
 
 #comment-input {
   height: 100px;
+  margin-top: 20px;
 }
 
 button {
-  margin: 50px;
+  margin: 30px auto;
   align-items: center;
-  margin-left: 80px;
   background-color: #710b1f;
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 16px;
   cursor: pointer;
 }
@@ -63,11 +85,13 @@ button:hover {
   margin: 30px;
   background-color: rgb(249, 159, 159);
   border-radius: 8px;
-  width: 600px;
+
+  max-width: 1200px;
   height: 350px;
   padding: 30px;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
@@ -86,10 +110,12 @@ button:hover {
   display: flex;
   flex-direction: row;
   flex-flow: wrap-reverse;
+  flex-grow: 2;
   align-items: center;
   justify-content: space-evenly;
   border-radius: 8px;
-  width: 600px;
+
+  max-width: 1000px;
   padding: 30px;
 }
 @font-face {
@@ -97,8 +123,6 @@ button:hover {
   src: url("Bagnard.otf") format("opentype");
 }
 
-.username {
-}
 #previous-user-comment {
   background-color: #710b1f;
 }
@@ -106,9 +130,6 @@ footer {
   background-color: rgb(237, 63, 63);
   width: auto;
   height: 180px;
-  margin-bottom: -30px;
-  margin-left: -30px;
-  margin-right: -30px;
 }
 
 footer .icons {
@@ -149,4 +170,24 @@ footer p {
 .fa-instagram {
   background: #710b1f;
   color: white;
+}
+
+@media (max-width: 450px) {
+  #page {
+    flex-direction: column;
+    padding: 0px;
+  }
+  #hotel-logo {
+    width: 270px;
+    padding: 20px;
+  }
+  header {
+    height: auto;
+  }
+  #user-input-form-container {
+    width: auto;
+  }
+  #previous-user-comments-container {
+    width: auto;
+  }
 }
