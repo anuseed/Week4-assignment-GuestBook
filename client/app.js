@@ -40,13 +40,16 @@ async function handleSubmit(event) {
     // this stops the data from being sent to the server if it exceeds the VARCHAR value
     return;
   }
-  const response = await fetch("http://localhost:8081/submitUserComment", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formValues),
-  });
+  const response = await fetch(
+    "https://week4-assignment-guestbook-1-lw9c.onrender.com/submitUserComment",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    }
+  );
   const data = await response.json();
   console.log(data);
   clearFormTextandThankYou();
@@ -72,8 +75,10 @@ console.log(userCommentsContainer);
 
 //this function communicates with my server
 async function getUserComments() {
-  const response = await fetch("http://localhost:8081/userComments");
-  console.log("jklajlkajlaj", response);
+  const response = await fetch(
+    "https://week4-assignment-guestbook-1-lw9c.onrender.com/userComments"
+  );
+
   const commentData = await response.json();
   console.log(commentData);
   commentData.forEach(appendComment);
